@@ -1,0 +1,220 @@
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 15pt;
+    text-align: justify;
+    margin: 0px;
+    padding: 0px;
+    top: 0px;
+    box-sizing: border-box;
+}
+::-webkit-scrollbar {
+    width: 5px; /* Largura da barra de rolagem */
+    height: 100px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1C1C1C; /* Cor de fundo da barra de rolagem */
+}
+
+::-webkit-scrollbar-thumb {
+    background: gray; /* Cor da barra de rolagem */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: black; /* Cor da barra de rolagem ao passar o mouse */
+}
+
+.modalAddClient {
+    position: fixed;
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(0,0,0,0.3);
+    backdrop-filter: blur(5px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.modalAddClientCentral {
+    width: 50vh;
+    height: 60vh;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.6);
+    border: 1px solid white;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    color: black;
+}
+.inputsModal {
+    background-color:white;
+    border: none;
+    outline: none;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.6);
+    border-radius: 10px;
+    padding: 10px;
+}
+.btnModal {
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 15px;
+    border: 1px solid black;
+    background-color: greenyellow;
+}
+.btnModal:hover{
+    scale: 1.1;
+    transition: .3s;
+}
+#btnAtualizarModal {
+    display: none;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 25px;
+    color: rgb(95, 89, 89);
+}
+header {
+    color: black;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.6);
+    width: 100%;
+    border-bottom: 1px solid gray;
+    margin-bottom: 50px;
+}
+header input, select {
+    margin: 5px;
+    border-radius: 10px;
+    background-color: inherit;
+    border: 1px solid black;
+    padding: 5px;
+    color:  black;
+    cursor: pointer;
+}
+header input[type="button"]:active{
+    animation: animationBtn 1s ease;
+}
+header input[type="button"] {
+    background-color: gray;
+    color: white;
+}
+@keyframes animationBtn {
+    from {
+        background-color: gray;
+        color: white;
+    } to {
+        background-color: inherit;  
+    }
+}
+
+#numeroClients {
+    margin: 0 auto;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.conteiner {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 60%;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    
+}
+.divConteiner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.divConteiner div {
+    width: 160px;
+    display: flex;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    background-color: inherit;
+    padding: 10px;
+    border: 1px solid black;
+    overflow: hidden;
+    
+}
+.divConteiner > div > p {
+    font-size: 100%;
+}
+
+footer {
+    margin-top: auto;
+    width: 100%;
+    background: linear-gradient(to right, #1C1C1C,#4F4F4F);
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+footer p {
+    color: aliceblue;
+    font-size: 15px;
+}
+footer a {
+    color: aliceblue;
+}
+.bloco {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 700px){
+    .divConteiner div {
+        width: 100px;
+    }
+    .divConteiner div p {
+        font-size: 18px;
+    }
+    * {
+        font-size: 15px;
+    }
+    h1 {
+        font-size: 23px;
+    }
+    .modalAddClientCentral {
+        width: 38vh;
+        height: 50vh;
+    }
+    #numeroClients {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .divConteiner div {
+        width: 65px;
+    }
+    .divConteiner div p {
+        font-size: 13px;
+    }
+    * {
+        font-size: 12px;
+    }
+    h1 {
+        font-size: 20px;
+    }
+    .modalAddClientCentral {
+        width: 35vh;
+        height: 45vh;
+    }
+    #numeroClients {
+        font-size: 11px;
+    }
+    footer p {
+        font-size: 10px;
+    }
+}

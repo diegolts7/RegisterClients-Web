@@ -4,8 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    
+    <div class="modalAddClient">
+        <div class="modalAddClientCentral">
+            <input type="number" placeholder="Matricula do cliente" id="matriculaInputModal" class="inputsModal">
+            <input type="text" placeholder="Digite o nome..." id="nomeInputModal" class="inputsModal">
+            <input type="text" placeholder="Digite o sexo..." id="sexoInputModal" class="inputsModal">
+            <input type="number" placeholder="Digite a idade..." id="idadeInputModal" class="inputsModal">
+            <input type="button" id = "btnEnviarModal" class="btnModal" value="Adicionar">
+            <input type="button" id = "btnAtualizarModal" class="btnModal" value="Atualizar">
+        </div>
+    </div>
+    <div class="bloco">
+        <header>
+            <h1>Cadastro funcionarios</h1>
+            <input type="button" id="btnAddFunc" value="Adicionar">
+            <input type="button" id="btn" value="exibir funcionarios">
+            <input type="button" value="Atualizar" id="abrirModalAtualizar">
+            <select name="select" id="filtrar">
+            <option value="">Filtrar</option>
+            <option value="idade">Idade</option>
+            <option value="masculino">Masculino</option>
+            <option value="feminino">Feminino</option>
+            <option value="nome">Nome</option>
+            </select>
+            <label for="">Pesquisar:</label>
+            <input type="text" id="pesquisar" placeholder="Nome, idade ou matricula">
+            <label for="">Excluir:</label>
+            <input type="number" id="excluirFuncionario" placeholder="Digite a matricula...">
+            <input type="button" id="btnEx" value="Excluir todos">
+        </header>
+        <p id="numeroClients"></p>
+        <div class="conteiner">
+            
+        </div>
+        <footer>
+            <p>Todos o direitos reservados a Diego Leite de Sousa</p>
+            <a href="https://github.com/" target="_blank"><i class='bx bxl-github'></i></a>
+        </footer>
+    </div>
+    <script src="js/script.js" type="module"></script>
 </body>
 </html>
